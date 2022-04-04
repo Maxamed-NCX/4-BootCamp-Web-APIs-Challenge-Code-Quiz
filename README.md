@@ -27,10 +27,8 @@ To create a JavaScript a Multiple Choice quiz and utilitizing all the functions 
 
 #### Credits
 
-- UofM BootCamp
-  - HTML & CSS Starter Codes
-  - (https://github.com/coding-boot-camp/friendly-parakeet)
 - MCX
+  - HTML & CSS Starter Codes
   - JS Program Function codes
 
 #### Site
