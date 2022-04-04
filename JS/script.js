@@ -69,7 +69,7 @@ function questionClick() {
     }
     // display new time on page
     timerElement.textContent = time;
-    replybackEl.textContent = "Wrong!";
+    replybackEl.textContent = "Inccorect!";
     replybackEl.style.color = "red";
     replybackEl.style.fontSize = "400%";
   } else {
