@@ -7,7 +7,7 @@
 
 ### Purpose
 
-To create a JavaScript a Multiple Choice quiz and utilitizing all the functions on combination for this codeing challenge. 
+To create a JavaScript a Multiple Choice quiz and utilitizing all the functions on combination for this codeing challenge.
 
 ### How to use
 
@@ -15,7 +15,7 @@ To create a JavaScript a Multiple Choice quiz and utilitizing all the functions 
   - After Quiz start
   - First set of Multiple Choice will display
   - There will be a timer run
-- Click on Answers options 
+- Click on Answers options
   - With Wrong selection "Incorrect" will apear"
   - With Right selection "Correct" will apear"
 
@@ -34,13 +34,13 @@ To create a JavaScript a Multiple Choice quiz and utilitizing all the functions 
 #### Site
 
 - GitHub Public Repo
-  - https://github.com/Mcnoor/Challenge3-BC.git
+  - https://github.com/Mcnoor/Challenge4-BC
 - GitHub Page Link
-  - https://mcnoor.github.io/Challenge3-BC/
+  - https://mcnoor.github.io/Challenge4-BC/
 
 #### images
 
-<img width="400" alt=" 1st Image" src="https://raw.githubusercontent.com/Mcnoor/Challenge3-BC/main/Images/1%20Start.png">
+<img width="400" alt=" 1st Image" src="hhttps://github.com/Mcnoor/Challenge4-BC/blob/main/Assest/Screen%20Shot%202022-04-04%20at%2012.43.16%20PM.png">
 
 <img width="400" alt=" 1st Image" src="https://raw.githubusercontent.com/Mcnoor/Challenge3-BC/main/Images/2%20Mid.png">
 
