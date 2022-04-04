@@ -1,5 +1,5 @@
 // DOM elements
-var questionsElement = document.querySelector("#questions");
+var questionElement = document.querySelector("#questions");
 var timerElement = document.querySelector("#time");
 var mcqElement = document.querySelector("#mcq");
 var submitBtn = document.querySelector("#submit");
@@ -9,7 +9,7 @@ var replyEl = document.querySelector("#reply");
 
 // functions
 var currentQuestionIndex = 0;
-var time = questions.length * 20;
+var time = question.length * 20;
 var timerId;
 
 function beginQuiz() {
@@ -18,7 +18,7 @@ function beginQuiz() {
   beginScreenEl.setAttribute("class", "hide");
 
   // show questions section
-  questionsElement.removeAttribute("class");
+  questionElement.removeAttribute("class");
 
   // begin timer
   timerId = setInterval(clockTick, 2000);
@@ -31,8 +31,8 @@ function beginQuiz() {
 
 function getQuestion() {
   // questions from array
-  console.log("question", questions)
-  var currentQuestion = questions[currentQuestionIndex];
+  console.log("question", question)
+  var currentQuestion = question[currentQuestionIndex];
 
   // New question
   var titleEl = document.getElementById("question-title");
@@ -60,7 +60,7 @@ function getQuestion() {
 
 function questionClick() {
   // check if user guessed wrong
-  if (this.value !== questions[currentQuestionIndex].answer) {
+  if (this.value !== question[currentQuestionIndex].answer) {
     // penalize time
     time -= 15;
 
@@ -88,7 +88,7 @@ function questionClick() {
   currentQuestionIndex++;
 
   // Time check
-  if (currentQuestionIndex === questions.length) {
+  if (currentQuestionIndex === question.length) {
     quizEnd();
   } else {
     getQuestion();
@@ -108,7 +108,7 @@ function quizEnd() {
   finalScoreEl.textContent = time;
 
   // hide questions section
-  questionsElement.setAttribute("class", "hide");
+  questionElement.setAttribute("class", "hide");
 }
 
 function clockTick() {
