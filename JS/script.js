@@ -42,13 +42,13 @@ function getQuestions() {
   mcqElement.innerHTML = "";
 
   // loop over Multiple Question Choice
-  currentQuestions.mcq.forEach(function(choice, i) {
+  currentQuestions.mcq.forEach(function(mcq, i) {
     // create new button for each choice selection
     var choiceNode = document.createElement("button");
-    choiceNode.setAttribute("class", "choice");
-    choiceNode.setAttribute("value", choice);
+    choiceNode.setAttribute("class", "mcq");
+    choiceNode.setAttribute("value", mcq);
 
-    choiceNode.textContent = i + 1 + ". " + choice;
+    choiceNode.textContent = i + 1 + ". " + mcq;
 
     // attach click event listener to each Anwser
     choiceNode.onclick = questionsClick;
@@ -129,7 +129,7 @@ function saveTopscore() {
   if (initials !== "") {
     // Saved scores from localstorage, or if not any, set to empty array
     var topscores =
-      JSON.parse(window.localStorage.getItem("Topscores")) || [];
+      JSON.parse(window.localStorage.getItem("topscores")) || [];
 
     // Create new score object for current user
     var newScore = {
@@ -139,7 +139,7 @@ function saveTopscore() {
 
     // save to localstorage
     topscores.push(newScore);
-    window.localStorage.setItem("Topscores", JSON.stringify(topscores));
+    window.localStorage.setItem("topscores", JSON.stringify(topscores));
 
     // Move to next display page
     window.location.href = "topscore.html";
@@ -147,7 +147,7 @@ function saveTopscore() {
 }
 
 function checkForEnter(event) {
-  // "13" represents the enter key
+  // represents the enter key
   if (event.key === "Enter") {
     saveTopscore();
   }
@@ -159,7 +159,7 @@ submitBtn.onclick = saveTopscore;
 // begin quiz
 beginBtn.onclick = beginQuiz;
 
-beginbtnElement.addEventListener("click", beginQuiz);
+beginBtn.addEventListener("click", beginQuiz);
 
 submitBtn.addEventListener("click", submit);
 
@@ -170,7 +170,7 @@ initialsElement.onkeyup = checkForEnter;
 // Scores JS functions
 
 //Stored in localstorage after reset if needed
-function printTopScores() {
+function printTopscores() {
   var topscores= JSON.parse(window.localStorage.getItem ("topscores")) || [];
 
   // Score order highest to lowest
@@ -183,7 +183,7 @@ topscores.forEach(function(score) {
   var liTag = document.createElement("li");
   liTag.textContent = score.intials3 + " " + score.score;
 
-  var liTag=document.getElementById("topscores");
+  var olElement=document.getElementById("topscores");
   olElement.appendChild(liTag);
 });
 }

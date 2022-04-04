@@ -12,8 +12,8 @@ var questions= [
 // QUESTION 2  
 {
   title: "Commonly used data types DO NOT include:",
-  mcq: ["alerts", "strings", "booleans","numbers"],
-  answer: "alerts"
+  mcq: ["local storage", "strings", "booleans","numbers"],
+  answer: "local storage"
 },
 
 // QUESTION 3  
@@ -34,7 +34,7 @@ var questions= [
 {
   title:
     "A very useful tool used during development and debugging for printing content to the debugger is:",
-    mcq: ["JavaScript", "terminal / bash", "for loops", "console.log"],
+    mcq: ["JavaScript", "terminal / bash", "console.log", "for loops", ],
   answer: "console.log"
 },
 
