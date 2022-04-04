@@ -7,7 +7,7 @@
 
 ### Purpose
 
-To create a JavaScript a Multiple Choice quiz and utilitizing all the functions on combination for this codeing challenge.
+To create a JavaScript a Multiple Choice quiz and utilitizing all the functions in combination for this coding challenge.
 
 ### How to use
 
