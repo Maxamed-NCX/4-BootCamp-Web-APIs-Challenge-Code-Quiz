@@ -142,7 +142,7 @@ function saveHighscore() {
     window.localStorage.setItem("highscores", JSON.stringify(highscores));
 
     // redirect to next page
-    window.location.href = "score.html";
+    window.location.href = "topscore.html";
   }
 }
 

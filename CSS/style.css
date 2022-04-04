@@ -1,7 +1,7 @@
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif, serif;
 }
-.panel {
+.wrapper {
   margin: 100px auto 0 auto;
   max-width: 600px;
 }
