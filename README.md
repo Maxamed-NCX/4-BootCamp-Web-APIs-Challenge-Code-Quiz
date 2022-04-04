@@ -40,10 +40,14 @@ To create a JavaScript a Multiple Choice quiz and utilitizing all the functions 
 
 #### images
 
-<img width="400" alt=" 1st Image" src="hhttps://github.com/Mcnoor/Challenge4-BC/blob/main/Assest/Screen%20Shot%202022-04-04%20at%2012.43.16%20PM.png">
+<img width="400" alt=" Main Page" src="https://raw.githubusercontent.com/Mcnoor/Challenge4-BC/main/Assest/1.%20Main-page.png">
 
-<img width="400" alt=" 1st Image" src="https://raw.githubusercontent.com/Mcnoor/Challenge3-BC/main/Images/2%20Mid.png">
+<img width="400" alt="Anwser Selection " src="https://raw.githubusercontent.com/Mcnoor/Challenge4-BC/main/Assest/2.%20Anwser-selection.png">
 
-<img width="400" alt=" 1st Image" src="https://raw.githubusercontent.com/Mcnoor/Challenge3-BC/main/Images/3%20Final.png">
+<img width="400" alt="Correct Anwser" src="https://raw.githubusercontent.com/Mcnoor/Challenge4-BC/main/Assest/3.%20Correct-anwser.png">
+
+<img width="400" alt="Incorrect Anwser" src="https://raw.githubusercontent.com/Mcnoor/Challenge4-BC/main/Assest/4.%20Incorrect-anwser.png">
+
+<img width="400" alt="Quiz Completed" src="https://raw.githubusercontent.com/Mcnoor/Challenge4-BC/main/Assest/5.%20Quiz-complete.png">
 
 #### Thank you
