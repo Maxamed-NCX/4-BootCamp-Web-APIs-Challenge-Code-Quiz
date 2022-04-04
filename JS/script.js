@@ -1,5 +1,5 @@
 // DOM elements
-var questionElement = document.querySelector("#questions");
+var questionsElement = document.querySelector("#questions");
 var timerElement = document.querySelector("#time");
 var mcqElement = document.querySelector("#mcq");
 var submitBtn = document.querySelector("#submit");
@@ -8,8 +8,8 @@ var initialsElement = document.querySelector("#initials");
 var replyEl = document.querySelector("#reply");
 
 // functions
-var currentQuestionIndex = 0;
-var time = question.length * 20;
+var currentQuestionsIndex = 0;
+var time = questions.length * 20;
 var timerId;
 
 function beginQuiz() {
@@ -18,7 +18,7 @@ function beginQuiz() {
   beginScreenEl.setAttribute("class", "hide");
 
   // show questions section
-  questionElement.removeAttribute("class");
+  questionsElement.removeAttribute("class");
 
   // begin timer
   timerId = setInterval(clockTick, 2000);
@@ -26,23 +26,23 @@ function beginQuiz() {
   // show begining time
   timerElement.textContent = time;
 
-  getQuestion();
+  getQuestions();
 }
 
-function getQuestion() {
+function getQuestions() {
   // questions from array
-  console.log("question", question)
-  var currentQuestion = question[currentQuestionIndex];
+  console.log("questions", questions)
+  var currentQuestions = questions[currentQuestionsIndex];
 
   // New question
-  var titleEl = document.getElementById("question-title");
-  titleEl.textContent = currentQuestion.title;
+  var titleEl = document.getElementById("questions-title");
+  titleEl.textContent = currentQuestions.title;
 
   // replace old question with new 
   mcqElement.innerHTML = "";
 
   // loop over Multiple Question Choice
-  currentQuestion.mcq.forEach(function(choice, i) {
+  currentQuestions.mcq.forEach(function(choice, i) {
     // create new button for each choice selection
     var choiceNode = document.createElement("button");
     choiceNode.setAttribute("class", "choice");
@@ -51,16 +51,16 @@ function getQuestion() {
     choiceNode.textContent = i + 1 + ". " + choice;
 
     // attach click event listener to each Anwser
-    choiceNode.onclick = questionClick;
+    choiceNode.onclick = questionsClick;
 
     // display on the page
     mcqElement.appendChild(choiceNode);
   });
 }
 
-function questionClick() {
+function questionsClick() {
   // check if user guessed wrong
-  if (this.value !== question[currentQuestionIndex].answer) {
+  if (this.value !== questions[currentQuestionsIndex].answer) {
     // penalize time
     time -= 15;
 
@@ -85,13 +85,13 @@ function questionClick() {
   }, 2000);
 
   // Next Multiple Choice Question
-  currentQuestionIndex++;
+  currentQuestionsIndex++;
 
   // Time check
-  if (currentQuestionIndex === question.length) {
+  if (currentQuestionsIndex === questions.length) {
     quizEnd();
   } else {
-    getQuestion();
+    getQuestions();
   }
 }
 
@@ -108,7 +108,7 @@ function quizEnd() {
   finalScoreEl.textContent = time;
 
   // hide questions section
-  questionElement.setAttribute("class", "hide");
+  questionsElement.setAttribute("class", "hide");
 }
 
 function clockTick() {
