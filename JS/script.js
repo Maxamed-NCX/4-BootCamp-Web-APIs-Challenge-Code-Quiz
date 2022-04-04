@@ -89,13 +89,13 @@ function questionsClick() {
 
   // Time check
   if (currentQuestionsIndex === questions.length) {
-    quizEnd();
+    endQuiz();
   } else {
     getQuestions();
   }
 }
 
-function quizEnd() {
+function endQuiz() {
   // End timer
   clearInterval(timerId);
 
@@ -104,8 +104,8 @@ function quizEnd() {
   endPageElement.removeAttribute("class");
 
   // show final score
-  var finalScoreEl = document.getElementById("final-score");
-  finalScoreEl.textContent = time;
+  var finalScoreElement = document.getElementById("final-score");
+  finalScoreElement.textContent = time;
 
   // hide questions section
   questionsElement.setAttribute("class", "hide");
@@ -118,7 +118,7 @@ function clockTick() {
 
   // check if user ran out of time
   if (time <= 0) {
-    quizEnd();
+    endQuiz();
   }
 } 
 
@@ -161,7 +161,9 @@ beginBtn.onclick = beginQuiz;
 
 beginbtnElement.addEventListener("click", beginQuiz);
 
-initialsEl.onkeyup = checkForEnter;
+submitBtn.addEventListener("click", submit);
+
+initialsElement.onkeyup = checkForEnter;
 
 
 
