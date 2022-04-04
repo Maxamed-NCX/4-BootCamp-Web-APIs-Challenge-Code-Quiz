@@ -4,12 +4,12 @@ var timerElement = document.querySelector("#time");
 var mcqElement = document.querySelector("#mcq");
 var submitBtn = document.querySelector("#submit");
 var beginBtn = document.querySelector("#begin");
-var initialsEl = document.querySelector("#initials");
-var replybackEl = document.querySelector("#replyback");
+var initialsElement = document.querySelector("#initials");
+var replyEl = document.querySelector("#reply");
 
 // functions
 var currentQuestionIndex = 0;
-var time = questions.length * 15;
+var time = questions.length * 20;
 var timerId;
 
 function beginQuiz() {
@@ -21,7 +21,7 @@ function beginQuiz() {
   questionsElement.removeAttribute("class");
 
   // begin timer
-  timerId = setInterval(clockTick, 1000);
+  timerId = setInterval(clockTick, 2000);
 
   // show begining time
   timerElement.textContent = time;
@@ -69,20 +69,20 @@ function questionClick() {
     }
     // Display updated time on page
     timerElement.textContent = time;
-    replybackEl.textContent = "Inccorect!";
-    replybackEl.style.color = "red";
-    replybackEl.style.fontSize = "400%";
+    replyEl.textContent = "Inccorect!";
+    replyEl.style.color = "red";
+    replyEl.style.fontSize = "400%";
   } else {
-    replybackEl.textContent = "Correct!";
-    replybackEl.style.color = "green";
-    replybackEl.style.fontSize = "400%";
+    replyEl.textContent = "Correct!";
+    replyEl.style.color = "green";
+    replyEl.style.fontSize = "400%";
   }
 
-  // Display Correct or Incorrect Replyback
-  replybackEl.setAttribute("class", "replyback");
+  // Display Correct or Incorrect Reply
+  replyEl.setAttribute("class", "reply");
   setTimeout(function() {
-    replybackEl.setAttribute("class", "replyback hide");
-  }, 100);
+    replyEl.setAttribute("class", "reply hide");
+  }, 2000);
 
   // Next Multiple Choice Question
   currentQuestionIndex++;
@@ -124,7 +124,7 @@ function clockTick() {
 
 function saveHighscore() {
   // Record value input 
-  var initials = initialsEl.value.trim();
+  var initials = initialsElement.value.trim();
 
   if (initials !== "") {
     // Saved scores from localstorage, or if not any, set to empty array

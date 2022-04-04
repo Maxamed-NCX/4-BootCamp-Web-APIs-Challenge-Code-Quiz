@@ -12,7 +12,7 @@ var questions= [
 // QUESTION 2  
 {
   title: "Commonly used data types DO NOT include:",
-  mcq: ["strings", "booleans", "alerts", "numbers"],
+  mcq: ["alerts", "strings", "booleans","numbers"],
   answer: "alerts"
 },
 
@@ -26,7 +26,7 @@ var questions= [
 // QUESTION 4  
  {
   title: "The condition in an if / else statement is enclosed within ____.",
-  mcq: ["quotes", "curly brackets", "parentheses", "square brackets"],
+  mcq: ["quotes", "parentheses", "curly brackets", "square brackets"],
   answer: "parentheses"
 },
 
@@ -49,8 +49,14 @@ var questions= [
 // QUESTION 7  
 {
   title: "Which in JavaScript in NOT a Function scope?",
-  mcq: ["var", "const", "let", "all the above",],
-  answer: "all the above"
+  mcq: ["var", "Tele", "const", "let",],
+  answer: "Tele"
 },
 
+// QUESTION 8  
+{
+  title: "What is the type of Pop up boxes available in JavaScript?:",
+  mcq: ["Alert", "Confirm", "Prompt", "All the above"],
+  answer: "All the above"
+}
 ]
