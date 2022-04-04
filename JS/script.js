@@ -122,7 +122,7 @@ function clockTick() {
   }
 } 
 
-function saveHighscore() {
+function saveTopscore() {
   // Record value input 
   var initials = initialsElement.value.trim();
 
@@ -149,12 +149,12 @@ function saveHighscore() {
 function checkForEnter(event) {
   // "13" represents the enter key
   if (event.key === "Enter") {
-    saveHighscore();
+    saveTopscore();
   }
 }
 
 // submit initials
-submitBtn.onclick = saveHighscore;
+submitBtn.onclick = saveTopscore;
 
 // begin quiz
 beginBtn.onclick = beginQuiz;
