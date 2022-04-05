@@ -1,10 +1,10 @@
 // DOM elements
 var questionsElement = document.querySelector("#questions");
 var timerElement = document.querySelector("#time");
-var mcqElement = document.querySelector("#mcq");
+var optionElement = document.querySelector("#option");
 var submitBtn = document.querySelector("#submit");
 var beginBtn = document.querySelector("#begin");
-var initialsElement = document.querySelector("#initials");
+var initialsElement = document.getElementById("initials");
 var replyEl = document.querySelector("#reply");
 
 // functions
@@ -21,7 +21,7 @@ function beginQuiz() {
   questionsElement.removeAttribute("class");
 
   // begin timer
-  timerId = setInterval(clockTick, 2000);
+  timerId = setInterval(clockTick, 1000);
 
   // show begining time
   timerElement.textContent = time;
@@ -31,30 +31,30 @@ function beginQuiz() {
 
 function getQuestions() {
   // questions from array
-  console.log("questions", questions)
+  console.log("questions", questions);
   var currentQuestions = questions[currentQuestionsIndex];
 
   // New question
   var titleEl = document.getElementById("questions-title");
   titleEl.textContent = currentQuestions.title;
 
-  // replace old question with new 
-  mcqElement.innerHTML = "";
+  // replace old question with new
+  optionElement.innerHTML = "";
 
   // loop over Multiple Question Choice
-  currentQuestions.mcq.forEach(function(mcq, i) {
+  currentQuestions.option.forEach(function (option, i) {
     // create new button for each choice selection
     var choiceNode = document.createElement("button");
-    choiceNode.setAttribute("class", "mcq");
-    choiceNode.setAttribute("value", mcq);
+    choiceNode.setAttribute("class", "option");
+    choiceNode.setAttribute("value", option);
 
-    choiceNode.textContent = i + 1 + ". " + mcq;
+    choiceNode.textContent = i + 1 + ". " + option;
 
     // attach click event listener to each Anwser
     choiceNode.onclick = questionsClick;
 
     // display on the page
-    mcqElement.appendChild(choiceNode);
+    optionElement.appendChild(choiceNode);
   });
 }
 
@@ -80,9 +80,9 @@ function questionsClick() {
 
   // Display Correct or Incorrect Reply
   replyEl.setAttribute("class", "reply");
-  setTimeout(function() {
+  setTimeout(function () {
     replyEl.setAttribute("class", "reply hide");
-  }, 2000);
+  }, 500);
 
   // Next Multiple Choice Question
   currentQuestionsIndex++;
@@ -120,25 +120,28 @@ function clockTick() {
   if (time <= 0) {
     endQuiz();
   }
-} 
+}
 
 function saveTopscore() {
-  // Record value input 
+  // Record value input
   var initials = initialsElement.value.trim();
 
-  if (initials !== "") {
-    // Saved scores from localstorage, or if not any, set to empty array
-    var topscores =
-      JSON.parse(window.localStorage.getItem("topscores")) || [];
+  console.log('initials', initials);
 
+  if (initials !== "") {
+    console.log('initials', initials);
+    // Saved scores from localstorage, or if not any, set to empty array
+    var topscores = JSON.parse(window.localStorage.getItem("topscores")) || [];
+    console.log('topscores 1', topscores);
     // Create new score object for current user
     var newScore = {
       score: time,
-      initials: initials
+      initials: initials,
     };
 
     // save to localstorage
     topscores.push(newScore);
+    console.log('topscores 2', topscores);
     window.localStorage.setItem("topscores", JSON.stringify(topscores));
 
     // Move to next display page
@@ -154,46 +157,19 @@ function checkForEnter(event) {
 }
 
 // submit initials
-submitBtn.onclick = saveTopscore;
+// submitBtn.onclick = saveTopscore();
+submitBtn.addEventListener("click", saveTopscore);
 
 // begin quiz
-beginBtn.onclick = beginQuiz;
+// beginBtn.onclick = beginQuiz();
 
 beginBtn.addEventListener("click", beginQuiz);
 
-submitBtn.addEventListener("click", submit);
+// submitBtn.addEventListener("click", submit);
 
 initialsElement.onkeyup = checkForEnter;
 
-
-
 // Scores JS functions
 
-//Stored in localstorage after reset if needed
-function printTopscores() {
-  var topscores= JSON.parse(window.localStorage.getItem ("topscores")) || [];
 
-  // Score order highest to lowest
-  topscores.sort(function (a, b) {
-    return b.score -a.score;
-  });
 
-// top score tag order and display
-topscores.forEach(function(score) {
-  var liTag = document.createElement("li");
-  liTag.textContent = score.intials3 + " " + score.score;
-
-  var olElement=document.getElementById("topscores");
-  olElement.appendChild(liTag);
-});
-}
-
-function removeTopscores () {
-  window.localStorage.removeItem ("topscores");
-  window.location.reload();
-}
-
-document.getElementById("remove").onclick = removeTopscores;
-
-// When page loads run funtions
-printTopscores();
