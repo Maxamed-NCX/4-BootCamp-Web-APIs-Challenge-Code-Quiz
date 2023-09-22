@@ -33,11 +33,6 @@ To create a JavaScript a Multiple Choice quiz and utilitizing all the functions 
 
 #### Site
 
-- GitHub Public Repo
-  - https://github.com/Mcnoor/Challenge4-BC
-- GitHub Page Link
-  - https://mcnoor.github.io/Challenge4-BC/
-
 ## **_Link URL to deployed website on GitHub_**
 [Deployed-Project](https://Maxamed-NCX.github.io/4-BootCamp-Web-APIs-Challenge-Code-Quiz/)
 
