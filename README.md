@@ -1,7 +1,7 @@
 # Challenge4-BC
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Maxamed-NCX/4-BootCamp-Web-APIs-Challenge-Code-Quiz)
-![GitHub top language](https://img.shields.io/github/languages/top/Maxamed-NCX/4-BootCamp-Web-APIs-Challenge-Code-Quiz)
+![GitHub repo size](https://img.shields.io/github/repo-size/Maxamed-NCX/4-Web-API-Application-Code-Quiz)
+![GitHub top language](https://img.shields.io/github/languages/top/Maxamed-NCX/4-Web-API-Application-Code-Quiz)
 
 ## UofM BootCamp: Challenge 4
 
@@ -34,11 +34,11 @@ To create a JavaScript a Multiple Choice quiz and utilitizing all the functions 
 #### Site
 
 ## **_Link URL to deployed website on GitHub_**
-[Deployed-Project](https://Maxamed-NCX.github.io/4-BootCamp-Web-APIs-Challenge-Code-Quiz/)
+[Deployed-Project](https://Maxamed-NCX.github.io/4-Web-API-Application-Code-Quiz/)
 
 ## **_Link URL to GitHub Repository_**
 
-[Github-Repo](https://github.com/Maxamed-NCX/4-BootCamp-Web-APIs-Challenge-Code-Quiz)
+[Github-Repo](https://github.com/Maxamed-NCX/4-Web-API-Application-Code-Quiz)
 
 #### images
 
