@@ -1,9 +1,9 @@
-# Challenge4-BC
+# Quiz Application
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Maxamed-NCX/4-Web-API-Application-Code-Quiz)
 ![GitHub top language](https://img.shields.io/github/languages/top/Maxamed-NCX/4-Web-API-Application-Code-Quiz)
 
-## UofM BootCamp: Challenge 4
+## UofM BootCamp: Application 4
 
 ### Purpose
 
