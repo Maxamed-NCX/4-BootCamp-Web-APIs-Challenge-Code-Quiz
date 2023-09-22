@@ -18,7 +18,7 @@ To create a JavaScript a Multiple Choice quiz and utilitizing all the functions 
 - Click on Answers options
   - With Wrong selection "Incorrect" will apear"
   - With Right selection "Correct" will apear"
-
+- Quiz has timer and will score accordingly
 ### Site Makeup
 
 - HTML (HyperText Markup Language)
